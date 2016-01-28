@@ -21,6 +21,7 @@ func main() {
 			if err == nil && conn != nil {
 				brdr := bufio.NewReaderSize(conn, 16)
 				go readln(brdr)
+				//comment this go routine the again build and run it now program will not crash
 				go readln(brdr)
 			} else {
 				fmt.Println(err.Error())
